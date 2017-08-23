@@ -1,1 +1,1 @@
-# Chess.Client.Python
+# Chess.Engine.Python
