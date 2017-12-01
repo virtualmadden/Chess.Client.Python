@@ -8,4 +8,4 @@ class TestEngine(unittest.TestCase):
         self.engine = Engine()
 
     def test_hello(self):
-        self.assertEqual(self.engine.calculate_total(3), 27)
+        self.assertEqual(self.engine.main(new ), "main.py -h")
