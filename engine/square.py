@@ -1,5 +1,6 @@
 from engine.state import State
 
+
 class Square(object):
     @staticmethod
     def on_board(row, col):
@@ -13,5 +14,4 @@ class Square(object):
 
     @staticmethod
     def blocked(row, col):
-        if State.turn == 'b':
-            if boar
+        raise NotImplementedError

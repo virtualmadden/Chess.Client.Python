@@ -23,5 +23,9 @@ class State(object):
     b_pawn = 0
 
     def reset_pieces(self):
-        self.w_king = 1
-        self.
+        self.w_king = self.b_king = 1
+        self.w_queen = self.b_queen = 1
+        self.w_rook = self.b_rook = 2
+        self.w_bishop = self.b_bishop = 2
+        self.w_knight = self.b_knight = 2
+        self.w_pawn = self.b_pawn = 8
