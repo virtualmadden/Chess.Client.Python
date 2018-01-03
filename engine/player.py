@@ -1,3 +1,6 @@
+import uuid
+
+
 class Player(object):
     def __init__(self):
-        player = Player()
+        self.player_id = uuid.uuid4()
