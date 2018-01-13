@@ -12,23 +12,17 @@ class Piece(object):
 
 
 class King(Piece):
-    def __init__(self, color):
+    def __init__(self, color, location):
         self.name = "King"
 
-        if color is "b":
-            Piece.__init__(self, color, 10, [0, 4])
-        else:
-            Piece.__init__(self, color, 10, [7, 3])
+        Piece.__init__(self, color, 10, location)
 
 
 class Queen(Piece):
-    def __init__(self, color):
+    def __init__(self, color, location):
         self.name = "Queen"
 
-        if color is "b":
-            Piece.__init__(self, color, 9, [0, 3])
-        else:
-            Piece.__init__(self, color, 9, [7, 4])
+        Piece.__init__(self, color, 9, location)
 
 
 class Rook(Piece):

@@ -5,7 +5,11 @@ import uuid
 
 
 class Game(object):
-    def __init__(self, move_time=5):
+    def end_game(self):
+        self.end_time = datetime.utcnow()
+        self.game_time = self.end_time - self.start_time
+
+    def __init__(self, move_time=300000):
         # game identifier
         self.game_id = uuid.uuid4()
 
@@ -14,12 +18,13 @@ class Game(object):
 
         # timing variables
         self.start_time = datetime.utcnow()
-        self.end_time = self.start_time
-        self.move_time_in_minutes = move_time
+        self.end_time = None
+        self.game_time = None
+        self.max_move_time = move_time
 
         # setup game board
         self.board = Board()
 
         # setup players
-        self.whitePlayer = Player()
-        self.blackPlayer = Player()
+        self.whitePlayer = Player("white")
+        self.blackPlayer = Player("black")
